@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Ren Meredith | Font Sizes</title>
+</head>
+<style>
+
+.px1 {
+    font-size: 16px;
+}
+
+.px2 {
+    font-size: 24px;
+}
+
+.px3 {
+    font-size: 20px;
+}
+
+.em1 {
+    font-size: 1em;
+}
+
+.em2 {
+    font-size: 1.5em;
+}
+
+.vw1 {
+    font-size: 1vw;
+}
+
+.vw2 {
+    font-size: 1.5vw;
+}
+
+.vh1 {
+    font-size: 1vh;
+}
+
+.vh2 {
+    font-size: 1.5vh;
+}
+
+.rem1 {
+    font-size: 1rem;
+}
+
+.rem2 {
+    font-size: 1.5rem;
+}
+
+.per1 {
+    font-size: 100%;
+}
+
+.per2 {
+    font-size: 150%;
+}
+
+.border {
+    border: 2px solid black;
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, .4);
+    padding: 10px 20px 10px 20px;
+}
+
+.border2 {
+    box-shadow: 10px 10px 22px rgba(0, 0, 0, .4);
+    padding: 10px 20px 10px 20px;
+}
+
+
+.blue {
+    background: -webkit-linear-gradient(45deg, rgba(0,255,252,1), rgba(166,0,255,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.peach {
+    background: -webkit-linear-gradient(45deg, #ff5f6d, #ffc371);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.white {
+    color: white;
+}
+
+.jumbotron {
+    background-image: linear-gradient(45deg, rgba(0,255,252,1), rgba(166,0,255,1));
+    color: white;
+}
+
+.card-header {
+    background-image: linear-gradient(45deg, #ff5f6d, #ffc371) !important;
+}
+
+.btn-link {
+    color: white !important;
+    font-weight: bold;
+}
+</style>
+<body class="container mt-5">
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Fun Font Sizes with Ren!</h1>
+        </div>
+
+        <div class="accordion" id="accordionExample">
+            <div class="card z-depth-0 bordered">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            The Pixel
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                    data-parent="#accordionExample">
+                    <div class="card-body">
+
+                        <!--THE PIXEL -->
+                        <div class="row border">
+                            <div class="blue text-center col-12">
+                                <h3>The Pixel (px)</h3>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="col-lg-12 peach">
+                                    <h4>Details</h4>
+                                </div>
+
+                                <div class="col-lg-12 mt-2"><strong>Common Sizing Unit: </strong>16px</div>
+                                <div class="col-lg-12 mt-2"><strong>User Customizable: </strong>No</div>
+                                <div class="col-lg-12 mt-2"><strong>Changes with Zoom: </strong>No</div>
+                                <div class="col-lg-12 mt-2"><strong>Changes with Parent: </strong>No</div>
+                                <div class="col-lg-12 mt-2 text-justify">
+                                    <strong>Details: </strong>Pixel sizing is absolute. If a user changes the
+                    <a href="#" data-toggle="tooltip" title="The base font-size is determined by the user's pre-defined preferences within the browser.">root size</a> of the font in their browser, 
+                    anything with a px unit will be unchanged. This is developer friendly, as you do not need to worry about
+                    root sizes changing the look of your layout. However, this is not user friendly, as your font may be larger or 
+                    smaller than they desire.
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="col-lg-8">
+                                <div class="col-lg-12 peach text-center">
+                                    <h4>Examples</h4>
+                                </div>
+                                <div class="px1"><strong>16px:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                                <div class="px2 mt-2"><strong>24px:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+
+                                <div class="col-lg-12 peach text-center mt-2">
+                                    <h4>Parent Element Responsiveness</h4>
+                                    <p>The following box will be styled to a 20px font size. The pixel element does not change when put into a parent element with an added font-size. </p>
+                                </div>
+                                <div class="border2 px3">
+                                    <div><strong>Control Text:</strong> I am unstyled; I have a font-size of 20px.</div>
+                                    <div class="px1"><strong>Unit Text:</strong> I am styled to 16px. I do not change sizes inside a parent element.</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--THE REM -->
+            <div class="card z-depth-0 bordered">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            The Root Element
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+
+                        <div class="row border mt-3">
+                            <div class="blue text-center col-12">
+                                <h3>The Root Element (rem)</h3>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="col-lg-12 peach">
+                                    <h4>Details</h4>
+                                </div>
+
+                                <div class="col-lg-12 mt-2"><strong>Common Sizing Unit: </strong>1rem</div>
+                                <div class="col-lg-12 mt-2"><strong>User Customizable: </strong>Yes</div>
+                                <div class="col-lg-12 mt-2"><strong>Changes with Zoom: </strong>No</div>
+                                <div class="col-lg-12 mt-2"><strong>Changes with Parent: </strong>No</div>
+                                <div class="col-lg-12 mt-2 text-justify">
+                                    <strong>Details: </strong>REM is based on the size of the 
+                    <a href="#" data-toggle="tooltip" title="The base font-size is determined by the user's pre-defined preferences within the browser.">root size</a>
+                                    of the browser. In most cases, the default of the root-size is 16px. In that case, 1rem = 16px. However, if the user changes their root size to 12px,
+                    then 1rem = 12px.
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-8">
+                                <div class="col-lg-12 peach text-center">
+                                    <h4>Examples</h4>
+                                </div>
+                                <div class="rem1"><strong>1rem:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                                <div class="rem2 mt-2"><strong>1.5rem:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+
+                                <div class="col-lg-12 peach text-center mt-2">
+                                    <h4>Parent Element Responsiveness</h4>
+                                    <p>The following box will be styled to a 20px font size. The rem element does not change when put into a parent element with an added font-size. </p>
+                                </div>
+                                <div class="border2 px3">
+                                    <div><strong>Control Text:</strong> I am unstyled; I have a font-size of 20px.</div>
+                                    <div class="rem1"><strong>Unit Text:</strong> I am styled to 1rem. I do not change sizes inside a parent element.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--THE EM -->
+            <div class="card z-depth-0 bordered">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            The Element Parent
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+
+                        <div class="row border mt-3">
+                            <div class="blue text-center col-12">
+                                <h3>The Element Parent (em)</h3>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="col-lg-12 peach">
+                                    <h4>Details</h4>
+                                </div>
+
+                                <div class="col-lg-12 mt-2"><strong>Common Sizing Unit: </strong>1em</div>
+                                <div class="col-lg-12 mt-2"><strong>User Customizable: </strong>Yes</div>
+                                <div class="col-lg-12 mt-2"><strong>Changes with Zoom: </strong>No</div>
+                                <div class="col-lg-12 mt-2"><strong>Changes with Parent: </strong>Yes</div>
+                                <div class="col-lg-12 mt-2 text-justify">
+                                    <strong>Details: </strong>EM is based on the size of the parent element. By default, the em will equal the
+                    <a href="#" data-toggle="tooltip" title="The base font-size is determined by the user's pre-defined preferences within the browser.">root size</a>
+                                    of the browser (which is the same as rem). However, when put into a div or other parent element that has been pre-styled, 1em will equal that font-size. 
+                    Therefor, a class with 1em will not necessarily render the same througout the page.
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-8">
+                                <div class="col-lg-12 peach text-center">
+                                    <h4>Examples</h4>
+                                </div>
+                                <div class="em1"><strong>1em:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                                <div class="em2 mt-2"><strong>1.5em:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+
+                                <div class="col-lg-12 peach text-center mt-2">
+                                    <h4>Parent Element Responsiveness</h4>
+                                    <p>The following box will be styled to a 20px font size. The em unit is dependent on the parent font-size. </p>
+                                </div>
+                                <div class="border2 px3">
+                                    <div><strong>Control Text:</strong> I am unstyled; I have a font-size of 20px.</div>
+                                    <div class="em1"><strong>Unit Text:</strong> I am styled to 1em. Because the parent element is 20px, 1em now equals 20px.</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!--THE VM -->
+
+            <div class="card z-depth-0 bordered">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            The Viewports
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="row border mt-3">
+                            <div class="blue text-center col-12">
+                                <h3>The View Width (vw) and View Height (vh)</h3>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="col-lg-12 peach">
+                                    <h4>Details</h4>
+                                </div>
+
+                                <div class="col-lg-12 mt-2"><strong>Common Sizing Unit: </strong>1vw, 1.5vh</div>
+                                <div class="col-lg-12 mt-2"><strong>User Customizable: </strong>No</div>
+                                <div class="col-lg-12 mt-2"><strong>Changes with Zoom: </strong>Yes</div>
+                                <div class="col-lg-12 mt-2"><strong>Changes with Parent: </strong>No</div>
+                                <div class="col-lg-12 mt-2 text-justify">
+                                    <strong>Details: </strong>Viewports are unique in that they change size with zoom. 
+                    <ul>
+                        <li>1 vw = 1/100th viewport width.</li>
+                        <li>1 vh = 1/100th viewport height.</li>
+                    </ul>
+
+                                    Viewports will maintain their size even when users zoom in and out. This can be frusterating for users if they think the text is too big or too small.
+                    
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-8">
+                                <div class="col-lg-12 peach text-center">
+                                    <h4>Examples</h4>
+                                </div>
+                                <div class="vw1"><strong>1vw:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                                <div class="vw2 mt-2"><strong>1.5vw:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                                <div class="vh1 mt-2"><strong>1 vh:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                                <div class="vh2 mt-2"><strong>1.5vh:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+
+                                <div class="col-lg-12 peach text-center mt-2">
+                                    <h4>Parent Element Responsiveness</h4>
+                                    <p>The following box will be styled to a 20px font size. The viewports will not change with parent sizes. </p>
+                                </div>
+                                <div class="border2 px3">
+                                    <div><strong>Control Text:</strong> I am unstyled; I have a font-size of 20px.</div>
+                                    <div class="vw1"><strong>Unit Text:</strong> I am styled to 1vw.</div>
+                                    <div class="vh1"><strong>Unit Text:</strong> I am styled to 1vh.</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!--THE % -->
+            <div class="card z-depth-0 bordered">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            The Percentage
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="row border mt-3">
+                            <div class="blue text-center col-12">
+                                <h3>The Percentage (%)</h3>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="col-lg-12 peach">
+                                    <h4>Details</h4>
+                                </div>
+
+                                <div class="col-lg-12 mt-2"><strong>Common Sizing Unit: </strong>100%</div>
+                                <div class="col-lg-12 mt-2"><strong>User Customizable: </strong>Yes</div>
+                                <div class="col-lg-12 mt-2"><strong>Changes with Zoom: </strong>No</div>
+                                <div class="col-lg-12 mt-2"><strong>Changes with Parent: </strong>Yes</div>
+                                <div class="col-lg-12 mt-2 text-justify">
+                                    <strong>Details: </strong>Percent as a unit is flexible like em. It will 
+                    take into account the root size, and a parent div size. It is very reliable and consistent. 
+                    
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-8">
+                                <div class="col-lg-12 peach text-center">
+                                    <h4>Examples</h4>
+                                </div>
+                                <div class="per1"><strong>100%:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                                <div class="per2 mt-2"><strong>150%:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+
+                                <div class="col-lg-12 peach text-center mt-2">
+                                    <h4>Parent Element Responsiveness</h4>
+                                    <p>The following box will be styled to a 20px font size. The percent unit does change with parent elements. </p>
+                                </div>
+                                <div class="border2 px3">
+                                    <div><strong>Control Text:</strong> I am unstyled; I have a font-size of 20px.</div>
+                                    <div class="per1"><strong>Unit Text:</strong> I am styled to 100%. I am 100% of the 20px font size of this element now.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--THE PROS AND CONS -->
+        <div class="card z-depth-0 bordered">
+            <div class="card-header" id="headingSix">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Pros and Cons
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                <div class="card-body">
+
+                    <div class="row border">
+                        <div class="blue text-center col-12">
+                            <h3>Web Design Font Units Pros and Cons</h3>
+                        </div>
+
+                        <div class="col-12 row">
+                            <div class="col-2 border-right"><strong>The Pixel (px)</strong></div>
+                            <div class="col-10 row">
+                                <div class="col-12">
+                                    <strong>Recommend:</strong> Print
+                                </div>
+                                <div class="col-12">
+                                    <strong>Avoid:</strong> Website (mostly)
+                                </div>
+                                <div class="col-12">
+                                    Due to its lack of scalability, the popular px may not be the best choice for web design. 
+                                    It can be frusterating for users who may require larger sized fonts but are relucant to zoom in and out to read 
+                                    text.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 row mt-3">
+                            <div class="col-2 border-right"><strong>REM</strong></div>
+                            <div class="col-10 row">
+                                <div class="col-12">
+                                    <strong>Recommend:</strong> Consistency on Web
+                                </div>
+                                <div class="col-12">
+                                    <strong>Avoid:</strong> Using ONLY rem
+                                </div>
+                                <div class="col-12">
+                                    Rem is scalable by the root font size, but will not scale simply because it is put into a div with a pre-declared font-size.
+                                        This creates consistency. Because of it's consistency, however, all rem webpages may need more css to adjust padding or margins when 
+                                        the rem size changes (i.e. between H1 and H2, for example).
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 row mt-3">
+                            <div class="col-2 border-right"><strong>EM</strong></div>
+                            <div class="col-10 row">
+                                <div class="col-12">
+                                    <strong>Recommend:</strong> Scalability
+                                </div>
+                                <div class="col-12">
+                                    <strong>Avoid:</strong> Using ONLY em
+                                </div>
+                                <div class="col-12">
+                                    EM is incredibly scalable as it will inherit sizing from parent elements. This creates a modular effect. However, a website created in 
+                                        all EM may require css to adjust padding or margins when elements change sizes. 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 row mt-3">
+                            <div class="col-2 border-right"><strong>Percent</strong></div>
+                            <div class="col-10 row">
+                                <div class="col-12">
+                                    <strong>Recommend:</strong> Reliability
+                                </div>
+                                <div class="col-12">
+                                    <strong>Avoid:</strong> Using ONLY percentage
+                                </div>
+                                <div class="col-12">
+                                    Percent sizing is very similiar to EM, but will almost automatically prevent text from being too small. An EM element that is 
+                                        nested too many times will become unreadable faster than a percent unit. Therefore, percents are more reliable but less scalable. 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 row mt-3">
+                            <div class="col-2 border-right"><strong>Viewports</strong></div>
+                            <div class="col-10 row">
+                                <div class="col-12">
+                                    <strong>Recommend:</strong> N/A
+                                </div>
+                                <div class="col-12">
+                                    <strong>Avoid:</strong> Everything
+                                </div>
+                                <div class="col-12">
+                                    No one is a fan of viewports. Viewports will literally keep the same size text no matter if the user zooms in or out. So they will get
+                                        the same view at 5% as they would at 300%. For developers, it ensures that the page will look good no matter the zoom of the user, but it can
+                                        be highly frusterating for users. 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+            <!--THE PROS AND CONS -->
+            <div class="card z-depth-0 bordered">
+                <div class="card-header" id="headingSeven">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            Wrap Up
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                    <div class="card-body">
+
+                        <div class="row border">
+                            <div class="blue text-center col-12">
+                                <h3>Wrap Up</h3>
+                            </div>
+
+                            <div class="col-12 row mt-3">
+                                There doesn't seem to be an obvious winner. The best solution seems to be to use REM but add in EM for aspects such as padding,
+                                            margins, etc. However, with enough CSS the same results can be acheived with any of the units. If you are dead-set on using a unit
+                                            type by itself that is responsive to parent elements, percent would be better than em. However, percent by itself will not work as well
+                                            as a REM/EM combo.
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
