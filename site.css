@@ -57,7 +57,9 @@ a.black {
 	color: black;
 }
 
-
+.row {
+	margin-left: 0 !important;	
+}
 
 .headerText, h1, .largerText, .cutesy {
 	font-family: 'Fredoka One', cursive;
