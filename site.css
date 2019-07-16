@@ -1,33 +1,8 @@
-:root {	 
-	/* --primary: #1995AD; */
-	/* --contrast: #BCBABE; */
-	/* --complementary: #A1D6E2; */
-	/* --mellow: #F1F1F2;	 */
-	
-/* 	--primary: #EC96A4;
-	--contrast: #5D535E;
-	--complementary: #9A9EAB;
-	--mellow: #DFE166;	 */
-
-/* 	--primary: #F0810F;
-	--contrast: #011a27;
-	--complementary: #063852;
-	--mellow: #E6D444;		 */
-	
-/* 	--primary: #4CB5F5;
-	--contrast: #34675C;
-	--complementary: #8ac100;
-	--mellow: #dee0db;	 */
-	
-	--primary: #EE693F;
-	--contrast: #423a35;
-	--complementary: #739F3D;
-	--mellow: #f9f8f7;	
-	
-/* 	--primary: #AF4425;
-	--contrast: #662E1C;
-	--complementary: #C9A66B;
-	--mellow: #EBDCB2;	 */
+:root {
+	--primary: #1995AD;
+	--complementary: #8c8b8c;
+	--contrast: #A1D6E2;
+	--mellow: #F1F1F2;
 }
 .headerText {
 	font-size: 8em;
@@ -38,32 +13,11 @@
     flex: 1 100%;
 }
 
-a.largerText {
-	font-size: 5vh;
-	font-family: 'Fredoka One', cursive;
-	text-decoration: none
-}
-
-a.white {
-	color: white;
-}
-
-
-a.white:hover, a.black:hover{
-	color: #e6e6e6;
-}
-
-a.black {
-	color: black;
-}
-
-.row {
-	margin-left: 0 !important;	
-}
 
 .headerText, h1, .largerText, .cutesy {
 	font-family: 'Fredoka One', cursive;
 }
+
 
 .largerText {
 	font-size: 5vh;
@@ -72,17 +26,49 @@ a.black {
 body, html, button, pre {
 	font-family: 'Noto Sans HK', sans-serif;
 	}
+
+/*______________LINKS_______________*/
+
+a.largerText {
+	font-size: 3.5rem;
+	font-family: 'Fredoka One', cursive;
+	text-decoration: none
+}
+
+a.white {
+	color: white;
+}
+
+a.whiteU {
+	color: white;
+	text-decoration: underline;
+}
+
+a.white:hover, a.black:hover, a.blackU:hover, a.whiteU:hover{
+	color: #e6e6e6;
+}
+
+a.black {
+	color: black;
+}
+
+a.blackU {
+	color: black;
+	text-decoration: underline;
+
+}
+
 	
 .hero {
 	font-family: 'Fredoka One', cursive;
-    height: 100%;
+    height: 100vh;
     position: relative;
     margin-top: 0;
 	}
 	
 .content-wrapper {
     width: 1280px;
-    max-width: 100%;
+    max-width: 100vw;
     overflow: hidden;
     box-sizing: border-box;
     margin: 240px auto 0;
@@ -97,6 +83,10 @@ body, html, button, pre {
 
 .test {
 	border: 2px solid red;
+}
+
+.shadow {
+	box-shadow: 4px 6px 15px rgba(0, 0, 0, .5) !important;
 }
 /*______________Text Color_______________*/
 
@@ -141,6 +131,8 @@ body, html, button, pre {
 	background-color: var(--mellow);
 }
 
+
+
 /*______________BUTTONS_______________*/
 
 .btn-white {
@@ -155,7 +147,7 @@ body, html, button, pre {
 }
 
 .btn-white:active {
-		background-image: linear-gradient(#cecece, #ffffff);
+	background-image: linear-gradient(#cecece, #ffffff);
 	box-shadow: 4px 4px 8px rgba(0, 0, 0, .4);
 }
 
@@ -179,6 +171,7 @@ body, html, button, pre {
 
 .shortWhiteHR {
 	border: 5px solid white;
+
 }
 
 .shortBlackHR {
@@ -234,6 +227,15 @@ ul.checkmark {
 	width: 100%;
 }
 
+.img-wrapper {
+	
+}
+
+.img-wrapper > img {
+		width: 100%;
+}
+
+/*______________COLOR CHANGE MENU_______________*/
 
 .menu-toggler { /*only controls the original checkbox (the default ugly one) */
   position: absolute;
@@ -247,8 +249,7 @@ ul.checkmark {
   z-index:2;
   opacity:0;
   cursor:pointer;
-  color: var(--primary);
-  
+  /* color: var(--primary); */
   margin: auto; /*CHANGE menu location. place 1 of 2 */
 }
 .menu-toggler:hover + label,
@@ -312,7 +313,8 @@ ul.checkmark {
   margin: auto;  /*CHANGE menu location. place 2 of 2 */
 }
 .menu-toggler + label:before,
-.menu-toggler + label:after {
+.menu-toggler + label:after
+ {
   width: 40px;
   height: 5px;
   display: block;
@@ -394,8 +396,8 @@ ul.checkmark {
 
 
 @media only screen and (max-width: 500px) {
-	.extraPadding {
-	padding: 1rem .5rem;
+.extraPadding {
+	padding: 5rem .5rem;
 }
 
 .headerText {
@@ -408,9 +410,7 @@ ul.checkmark {
 	margin-top: 5rem;
 }
 
-.hero {
-	height: 50%;
-}
+
 
 .content-wrapper {
     margin: 175px auto 0;
