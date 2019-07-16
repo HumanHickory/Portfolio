@@ -5,53 +5,124 @@
 	
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
 	
-	
+
 	<link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a496bc4f2c.js"></script>
-		<link rel="stylesheet" href="site.css" />
+	<link rel="stylesheet" href="site.css" />
+	
 		<title>Ren Meredith</title>
-
 <style>
+#chevrondown {
+  position :relative;
+  -webkit-animation: bounce 3s infinite; 
+  animation: bounce 3s infinite;
+}
 
 
+@-webkit-keyframes bounce {
+  0%, 20%, 40%, 100% {
+    -webkit-transform: translateY(0);
+  }
+  10%, 30% {
+    -webkit-transform: translateY(-5px);
+  }
+}
+@keyframes bounce {
+  0%, 10%, 30%, 50%, 70%, 100%{
+    transform: translateY(0);
+  }
+   20%, 40%, 60% {
+    transform: translateY(-5px);
+  }
+}
 
+
+.bgDatabase {
+	background: url(img/database.jpg);
+	background-size: cover; 
+	position: relative;  
+}
+
+.bgDatabase:before {
+	background: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.5));
+	content: "";
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+  
+.bgChart {
+	background: url(img/chart.jpg);
+	background-size: cover; 
+	position: relative;  
+}
+
+
+.bgChart:before {
+	background: linear-gradient(to bottom, rgba(255,255,255,.3), rgba(255,255,255,.6));
+	content: "";
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+  
+.bgTools {
+	background: url(img/tools.jpg);
+	background-size: cover; 
+	position: relative;  
+}
+
+
+.bgTools:before {
+	background: linear-gradient(to bottom, rgba(255,255,255,.5), rgba(255,255,255,.6));
+	content: "";
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+  
 </style>
 </head>
 <body>
-
-
-
 	<nav class="navbar primary mt-5">	
 		<nav class="menu">
-			<input class="menu-toggler" type="checkbox">
+			<input class="menu-toggler" type="checkbox"/>
 			<label for="menu-toggler"></label>
 				<ul>
 					<li class="menu-item">
-						<a class="fas fa-paint-roller" href="#" id="palette1" style="background: #1995AD;"></a>
+						<a class="fas fa-paint-roller" href="#" id="palette1" style="background: #1995AD;"></a> <!--gray and blue -->
 					</li>
 					<li class="menu-item">
-						<a class="fas fa-paint-brush-alt" href="#" id="palette2" style="background: #EC96A4;"></a>
+						<a class="fas fa-paint-brush-alt" href="#" id="palette2" style="background: #3500D3;"></a> <!--Bright Blue and Navy -->
 					</li>
 					<li class="menu-item">
-						<a class="fas fa-spray-can" href="#" id="palette3" style="background: #F0810F;"></a>
+						<a class="fas fa-spray-can" href="#" id="palette3" style="background: #962715;"></a> <!--Apple and B/W -->
 					</li>
 					<li class="menu-item">
-						<a class="fas fa-palette"href="#" id="palette4" style="background: #4CB5F5;"></a>
+						<a class="fas fa-palette"href="#" id="palette4" style="background: #EE4C7C;"></a> <!--Pink and more pink -->
 					</li>
 					<li class="menu-item">
-						<a class ="fas fa-fill-drip" href="#" id="palette5" style="background: #739F3D;"></a>
+						<a class ="fas fa-fill-drip" href="#" id="palette5" style="background: #F9BA32;"></a> <!--blue and yellow -->
 					</li>
 					<li class="menu-item">
-						<a class="fas fa-brush" href="#" id="palette6" style="background: #C9A66B;"></a>
+						<a class="fas fa-brush" href="#" id="palette6" style="background: #c1c2be;"></a> <!--gray and cobolt -->
 					</li>
 				</ul>
 		</nav>
@@ -63,45 +134,13 @@
 		<i class="fas fa-chevron-down mt-5 primary" id="chevrondown"></i>
 	</div>
 
-	<div id="scrollTo" class="mb-5 pb-5">	</div>
+	<div id="scrollTo" class="mb-5 pb-5"></div>
 	<div class="container">	
-		<div class="row">
-			<div class="headerText col-12">Code.</div>
-			
-			<div class="col-xl-6 col-12 bgMellow extraPadding"> 
-				<h1 class="col-12"> Front End. </h1>
-				<div class="col-5"> 
-					<hr class="shortBlackHR">
-				</div>				
-				<div class="col-xl-10 offset-xl-1 mt-5 text-lg-center"> 
-					Read more about my experience with HTML, CSS, and JQuery.
-								
-					<div class="mt-5">
-						<a class="btn btn-black mellow" href="FrontEnd.html"> Check It Out. </a>
-					</div>
-				</div>			
-			</div>
-			
-			
-			<div class="col-xl-6 col-12 bgcontrast extraPadding"> 
-				<h1 class="col-12 white"> Back End. </h1>
-				<div class="col-5"> 
-					<hr class="shortWhiteHR">
-				</div>
-				
-				<div class="white col-xl-10 offset-xl-1 mt-5 text-lg-center"> 
-					Check back end development coding, created primarily in C#, created by me for use in 
-					various types of projects.
-								
-					<div class="mt-5">
-						<a class="btn btn-white contrast" href="BackEnd.html"> Check It Out. </a>
-					</div>
-				</div>
-			</div>
-			
-			
+		<div class="headerText col-12" data-aos="fade-right"  data-aos-delay="100">Work.</div>
+		<div class="row shadow">
+		
 			<div class="col-12 bgPrimary extraPadding text-lg-center"> 
-				<h1 class="white col-12"> Resume. </h1>
+				<h1 class="white col-12" data-aos="zoom-in"> Resume. </h1>
 				<div class="col-xl-2 offset-xl-5 col-5"> 
 					<hr class="shortWhiteHR">
 				</div>
@@ -109,116 +148,447 @@
 					Read more about my coding history as well as review project descriptions from my professional history.
 				</div>
 				<div class="col-12 mt-5">
-					<a class="btn btn-white primary" href="resume.html"> Learn More. </a>
-				</div>
-				
-			</div>		
-		</div>
-		
-		
-		<div class="row contentBreak">
-					<div class="headerText col-12 d-none d-xl-block">Websites.</div>
-					<div class="headerText col-12 d-xl-none">Web.</div>
-			
-			
-			<div class="col-12 bgMellow extraPadding text-lg-center"> 
-				<h1 class="col-12"> Background. </h1>
-				<div class="col-xl-2 offset-xl-5 col-5"> 
+					<button type="button" class="btn btn-white primary" data-toggle="modal" data-target="#modal">
+						View Resume.
+					</button>
+				</div>				
+			</div>	
+	
+			<div class="col-xl-6 col-12 bgDatabase white extraPadding"> 
+				<h1 class="col-12" data-aos="zoom-in"> SSIS. </h1>
+				<div class="col-5"> 			
+					<hr class="shortWhiteHR">					
+				</div>				
+				<div class="col-xl-10 offset-xl-1 mt-5 text-justify"> 
+					Professional experience creating and running daily jobs from C# SSIS projects. Includes use of Dapper, Entity Framework, Newtonsoft	and more.									
+				</div>			
+			</div>
+						
+			<div class="col-xl-6 col-12 bgMellow extraPadding"> 
+				<h1 class="col-12" data-aos="zoom-in"> Framework and API. </h1>
+				<div class="col-5"> 
 					<hr class="shortBlackHR">
+				</div>				
+				<div class="col-xl-10 offset-xl-1 mt-5 text-justify"> 
+					Created and modified several frameworks for use at a professional level. Additionally, I have experience creating APIs using these frameworks, and using
+					external APIs to create frameworks. 
 				</div>
-				<div class="col-xl-6 offset-xl-3 mt-5"> 
-					Read more about my web development history and view some examples from my professional career.	
-					
+			</div>
+			
+			<div class="col-12 bgComplementary extraPadding text-lg-center"> 
+				<h1 class="white col-12" data-aos="zoom-in"> Web Development. </h1>
+				<div class="col-xl-2 offset-xl-5 col-5"> 
+					<hr class="shortWhiteHR">
 				</div>
-				<div class="col-12 mt-5">
-					<a class="btn btn-black mellow"> Learn More. </a>
+				<div class="col-xl-6 offset-xl-3 white mt-5 text-justify"> 
+					Professional, academic and personal experience creating and maintaining various types of websites for myself, for clients, and for friends. 
 				</div>
-				
+				<div class="col-xl-6 offset-xl-3 white mt-5 text-justify"> 
+					The vast majority of my front end experience is in hand-coded, Bootstrap 4 pages, although I do have professional experience using WordPress and Squarespace as well. 
+					With Bootstrap, I use custom SASS as well as adding in a CSS stylesheet for easy modification. I development using HTML 5, as well as JQuery and JavaScript.
+					In conjunction with backend development, I am also proficient with AJAX and JSON.
+				</div>	
+				<div class="col-xl-6 offset-xl-3 white mt-5 text-justify"> 
+					My experience with backend development primarily includes .NET applications. These applications communicate with frameworks and APIs, and will typically add,
+					update, display and delete data using Entity Framework connections to SQL Server. I have created stored procedures and simple SQL queries to accomodate this.
+					Additionally, I am highly experienced with MVC and Razor syntax.
+				</div>						
 			</div>	
 			
-			
-			<div class="col-xl-6 col-12 bgComplementary extraPadding"> 
-				<h1 class="white col-12"> Bootstrap. </h1>
+			<div class="col-xl-6 col-12 bgContrast extraPadding"> 
+				<h1 class="col-12 white" data-aos="zoom-in"> SQL & SQL Server. </h1>
 				<div class="col-5"> 
 					<hr class="shortWhiteHR">
 				</div>				
-				<div class="col-xl-10 offset-xl-1 mt-5 text-lg-center"> 
-					<span class="white">Checkout website examples created by me, by hand, in Bootstrap 4.</span>
-								
-					<div class="mt-5">
-						<a class="btn btn-white complementary" href="bootstrap.html"> Check It Out. </a>
+				<div class="white col-xl-10 offset-xl-1 mt-5 text-justify"> 
+					Due to my frequent creation of SSIS projects and .Net applications, it became necessary for me to study and implement SQL into my work. Although I would never claim to be
+					a SQL expert, I have a solid foundation in the language and can develop stored procedures to meet business needs.
+				</div>
+			</div>
+			
+			<div class="col-xl-6 col-12 bgChart extraPadding"> 
+				<h1 class="col-12" data-aos="zoom-in"> VBA and Excel. </h1>
+				<div class="col-5"> 
+					<hr class="shortBlackHR">
+				</div>				
+				<div class="col-xl-10 offset-xl-1 mt-5 text-justify"> 
+					My first programming language was VBA, as I found an extensive need for it at Best Buy. I frequently found myself being forced to spend hours pulling, comparing, and condensing
+					reports provided in Excel by corporate. One day, I thought to myself, "there must be a better way!" This was the beginning of my programming career, as I quickly fell in love with 
+					VBA and knew I needed more.
+				</div>
+			</div>
+									
+		</div> <!--end "row shadow"-->
+		
+		
+		<div class="contentbreak">
+			<div class="headerText col-12 d-none d-xl-block" data-aos="fade-right">Websites.</div>
+			<div class="headerText col-12 d-xl-none" data-aos="fade-right">Web.</div>		
+			<div class="shadow row">						
+				<div class="col-xl-6 col-12 bgMellow extraPadding"> 
+
+					<h1 class="col-12" data-aos="zoom-in"> Diver's Alert Network. </h1>
+					<div class="col-5"> 
+						<hr class="shortBlackHR">
 					</div>
+					<div class="col-xl-10 offset-xl-1 mt-5 text-lg-center">
+						Diver's Alert Network (DAN) is a non profit organization that is dedicated to making SCUBA diving as safe as possible.
+						Although DAN's website was around long before I was, I have created and maintained several of the web pages. 
+						Checkout an example of a page that I recently created.
+						<div class="mt-5">
+							<a class="btn btn-black mellow" href="https://www.diversalertnetwork.org/give/"> Check It Out. </a>
+						</div>
+					</div>			
+				</div>	
+			
+			
+				<div class="col-xl-6 col-12 bgComplementary extraPadding"> 
+					<h1 class="white col-12" data-aos="zoom-in">  Hickory Tech Solutions. </h1>
+					<div class="col-5"> 
+						<hr class="shortWhiteHR">
+					</div>				
+					<div class="col-xl-10 offset-xl-1 mt-5 text-lg-center"> 
+						<span class="white">Hickory Tech Solutions was a project that started in Del Rio, TX in order to help educate
+						the small city on technology. Since most residents didn't have access to computer education, Hickory Tech Solutions
+						offered countless trainings and services to make technology easy. I created and maintained the entirety of the website.</span>								
+						<div class="mt-5">
+							<a class="btn btn-white complementary" href="http://hickorytechsolutions.com/"> Check It Out. </a>
+						</div>
+					</div>			
+				</div>
+			
+				<div class="col-xl-6 col-12 bgPrimary extraPadding"> 
+					<h1 class="white col-12" data-aos="zoom-in"> Kaplan Construction. </h1>
+					<div class="col-5"> 
+						<hr class="shortWhiteHR">
+					</div>				
+					<div class="col-xl-10 offset-xl-1 mt-5 text-lg-center"> 
+						<span class="white">Kaplan Construction is an popular construction company in my home town of Long Beach, CA. Many years ago,
+						I offered to start working on their website and have since maintained the website and client communication.
+						Visit the primary Squarespace website I have been maintaining for several years.</span>								
+						<div class="mt-5">
+							<a class="btn btn-white primary" href="http://www.kaplanconstruction.com/"> Check It Out. </a>
+						</div>
+					</div>
+				</div>	
+
+				<div class="col-xl-6 col-12 bgContrast extraPadding"> 
+					<h1 class="white col-12" data-aos="zoom-in"> D&D Shops. </h1>
+					<div class="col-5"> 
+						<hr class="shortWhiteHR">
+					</div>				
+					<div class="col-xl-10 offset-xl-1 mt-5 text-lg-center"> 
+						<span class="white">We all have to have a little fun in our lives. For me, that was building a website dedicated to 
+						showing D&D 'products' for in-game 'purchases'. My players can have a laugh as they browse the shops without having to 
+						flip through pages and pages of guides to find what they want. It started as a parody 90's website but is slowly being upgraded
+						to a more modern feel.</span>								
+						<div class="mt-5">
+							<a class="btn btn-white contrast" href="http://www.dndshops.club/"> Check It Out. </a>
+						</div>
+					</div>
+				</div>					
+			</div> <!-- end "shadow row" -->						
+		</div><!--end "contentBreak"-->
+		
+		<div class="contentbreak">
+		<div class="headerText col-12" data-aos="fade-right"  data-aos-delay="100">Tools.</div>
+		<div class="row shadow">
+		
+			<div class="col-xl-6 col-12 bgMellow extraPadding"> 
+				<h1 class="col-12" data-aos="zoom-in"> Languages. </h1>
+				<div class="col-5"> 			
+					<hr class="shortBlackHR">					
+				</div>				
+				<div class="col-xl-10 offset-xl-1 mt-5 text-justify"> 
+					C#, HTML, CSS, jQuery, JavaScript, VBA, VB, SQL, JSON, AJAX 								
 				</div>			
 			</div>
 			
-			<div class="col-xl-6 col-12 bgPrimary extraPadding"> 
-				<h1 class="white col-12"> WordPress. </h1>
-				<div class="col-5"> 
-					<hr class="shortWhiteHR">
-				</div>
-				
-				<div class="col-xl-10 offset-xl-1 mt-5 text-lg-center"> 
-					<span class="white">Visit the primary WordPress website I have been maintaining for several years.</span>
-								
-					<div class="mt-5">
-						<a class="btn btn-white primary" href="wordpress.html"> Check It Out. </a>
-					</div>
-				</div>
+			<div class="col-xl-6 col-12 bgComplementary extraPadding white"> 
+				<h1 class="col-12  data-aos="zoom-in"> Skills and Tools. </h1>
+				<div class="col-5"> 			
+					<hr class="shortWhiteHR">					
+				</div>				
+				<div class="col-xl-10 offset-xl-1 mt-5 text-justify"> 
+					ASP.Net, MVC, Bootstrap 4, SSIS, SQL Server, Visual Studio, Notepad++, GitHub, Azure, MS Office								
+				</div>			
 			</div>
+						
 			
-			
-		</div>
+		<div class="col-12 bgTools extraPadding text-lg-center" id="Proficiencies"> 
+				<h1 class="col-12" data-aos="zoom-in"> ToolBox. </h1>
+				<div class="col-xl-2 offset-xl-5 col-5"> 
+					<hr class="shortBlackHR ">
+				</div>				
+				<div class="col-xl-10 offset-xl-1 mt-5 row pr-0"> 
+					<div class="imageBubble col-xl-2 mt-3" data-aos="zoom-in-up">
+						<img src="img/html5.png" alt="HTML 5 and CSS 3 logo"/>
+					</div>		
+
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/bootstrap.jpg" alt="Bootstrap logo" data-aos="zoom-in-up" data-aos-delay="100"/>
+					</div>						
+					
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/dotNetMVC.jpg" alt="ASP.NET MVC logo" data-aos="zoom-in-up" data-aos-delay="200"/>
+					</div>
+					
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/razor.png" alt="Razor Engine logo" data-aos="zoom-in-up" data-aos-delay="300"/>
+					</div>	
+					<div class="imageBubble col-xl-2 mt-3" data-aos="zoom-in-up">
+						<img src="img/cs.png" alt="C# logo"/>
+					</div>	
+					
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/vb.png" alt="Visual Basic logo" data-aos="zoom-in-up" data-aos-delay="100"/>
+					</div>	
+					
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/vba.png" alt="VBA logo" data-aos="zoom-in-up" data-aos-delay="400"/>
+					</div>	
+					
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/sql.jpg" alt="SQL logo" data-aos="zoom-in-up" data-aos-delay="200"/>
+					</div>						
+					
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/ss.jpg" alt="SQL Server logo" data-aos="zoom-in-up" data-aos-delay="100"/>
+					</div>
+					
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/SSIS.png" alt="SSIS logo" data-aos="zoom-in-up" data-aos-delay="300"/>
+					</div>						
+									
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/AndroidSDK.png" alt="SDK logo" data-aos="zoom-in-up" data-aos-delay="400"/>
+					</div>	
+
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/xcode.png" alt="XCode logo" data-aos="zoom-in-up" data-aos-delay="200"/>
+					</div>
+
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/entityFramework.png" alt="Entity Framework logo" data-aos="zoom-in-up" data-aos-delay="100"/>
+					</div>			
+
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/java.jpg" alt="Java logo" data-aos="zoom-in-up" data-aos-delay="300"/>
+					</div>	
+
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/swift.png" alt="Swift logo" data-aos="zoom-in-up" data-aos-delay="100"/>
+					</div>						
+										
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/visualStudio.jpg" alt="Visual Studio logo" data-aos="zoom-in-up" data-aos-delay="400"/>
+					</div>	
+					
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/notepad.png" alt="Notepad++ logo" data-aos="zoom-in-up" data-aos-delay="500"/>
+					</div>	
+					
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/mdb.jpg" alt="Material Design Bootstrap Logo" data-aos="zoom-in-up" data-aos-delay="600"/>
+					</div>	
+					
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/font_awesome_logo.png" alt="Font Awesome logo" data-aos="zoom-in-up" data-aos-delay="700"/>
+					</div>	
+
+					<div class="imageBubble col-xl-2 mt-3">
+						<img src="img/jQuery.png" alt="jQuery logo" data-aos="zoom-in-up" data-aos-delay="700"/>
+					</div>						
+				</div>			
+			</div>											
+		</div> <!--end "row shadow"-->
+	</div><!--end "contentBreak"-->
 
 	
-	
-	<div class="row contentBreak">
-					<div class="headerText col-12">Let's Talk!</div>
-			
-			
-
-				<div class="col-12 bgPrimary extraPadding row">
+		<div class="contentBreak">
+			<div class="headerText col-12">Let's Talk!</div>
+			<div class="shadow row">
+			<div class="col-12 bgPrimary extraPadding text-justify"> 
 					<a href="mailto:renhickory@gmail.com" class="white col-12 largerText" id="email"> RenHickory <br> <span style="padding-left: 1.5em; text-indent: -1.5em;"> @Gmail.com</span></a>
-						<div class="col-5 mt-3"> 
-							<hr class="shortWhiteHR">
-						</div>
-
-					
-					
+					<div class="col-5 mt-3"> 
+						<hr class="shortWhiteHR">
+					</div>					
 					<div class="white col-12 mt-5"> 
-						I am passionate about what I do and am always ready for the next challenge. Let's build something together!			
+						As a programmer who is just beginning my professional journey, I am passionate about what I do and am always ready for the next challenge. 
+						Despite not having the years of experience that some may have, I am desperate to learn more and spend the vast majority of my free time 
+						working on web development projects, finding new tools, reading interesting articles, or taking computer science classes. 
+						If you take a chance with me, you can expect a motivated individual who doesn't believe in the phrase, "that's not my job".
+						Let's build something together!			
 					</div>
 					<div class="white col-12 mt-5">
 						Ren Meredith <br>
 						Raleigh-Durham Area, NC
-					</div>
-						
+					</div>						
 					<div class="white col-xl-10 offset-xl-1 mt-5 text-center"> 
-
 						<span class="bottomIcons">
 							<a href="mailto:renhickory@gmail.com" class="white"><i class="fas fa-envelope"></i></a>
 							<a href="#" class="white"><i class="fas fa-user-alt mx-5"></i></a>
 							<a href="tel:5623704395" class="white"><i class="fas fa-phone"></i></a>
 							<a href="items/RenMeredith_Resume.pdf" class="white"><i class="fas fa-file-pdf ml-5"></i></a>
-						</span>
-						
+						</span>					
 					</div>
-					</div>
+				</div> <!-- end "col-12 bgPrimary extraPadding row" -->
+			</div><!--end "row shadow"-->										
+		</div><!--end "contentBreak"-->										
+	</div> <!-- end "container" -->
+		
 
+		
+<!-- Modal -->
+<!-- Modal -->
+<!-- Modal -->
+<!-- Modal -->
+<!-- Modal -->
 
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+	
+	<!--Modal Header-->
+      <div class="modal-header bgcontrast">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+	  
+	  <!--Modal Body -->
+      <div class="modal-body mt-3">
+
+	<div class="row">
+			<div class="headerText col-12">Resume.</div>
+			
+				<!--Work History-->
+			<div class="col-xl-8 col-12 bgMellow extraPadding"> 
+				<h1 class="col-8"> Work History. </h1>
+				<div class="col-5"> 
+					<hr class="shortBlackHR">
+				</div>				
+				<div class="col-xl-12 mt-5"> 
+					<div class="col-12"><span class="h4"><b> Software Developer.</b></span> Durham, NC</div>
+					<h5 class="col-12">Diver's Alert Network (02/2019 - Present)</h5>
+					<ul class="mt-3 mr-xl-5 checkmark">
+						<li> Designed Web Apps and CMS using ASP.Net MVC</li>
+						<li> Created various framework methods to streamline production</li>
+						<li> Created SSIS projects for automated processes</li>
+						<li> Managed company help desk and fixed IT issues per request</li>
+						<li> Managed SEO for the company website using Moz</li>
+						<li> Intranet user access admin for DAN America, DAN World, and DAN Asia Pacific</li>
+					</ul>
+				</div>
+			
+				<div class="col-xl-12 mt-5"> 
+					<div class="col-12"><span class="h4"><b> Web Designer.</b></span> Del Rio, TX</div>
+					<h5 class="col-12">Hickory Tech Solutions (01/2018 - 02/2019)</h5>
+					<ul class="mt-3 mr-xl-5 checkmark">
+						<li> Designed UI based on color scheme and the goal of the website</li>
+						<li> Updated new information as it became available on the website</li>
+						<li> Focused heavily on documentation and creating easy to read CSS</li>
+						<li> Hosted on GitHub Pages for cost management</li>
+						<li> Created Logo and graphics as needed using Photoshop and Illustrator</li>
+					</ul>
 				</div>
 
-				
-				
-				
-							
-		</div>
-	</div>
+				<div class="col-xl-12 mt-5"> 
+					<div class="col-12"><span class="h4"><b> Media Consultant.</b></span> Signal Hill, CA</div>
+					<h5 class="col-12">Kaplan Construction (08/2017 - 02/2019)</h5>
+					<ul class="mt-3 mr-xl-5 checkmark">
+						<li> Modified WordPress theme to accomodate owner's requirments </li>
+						<li> Wrote and updated several blogs as per owner's request</li>
+						<li> Implemented add on features, such as contact forms and search bars</li>
+						<li> Continue to manage incoming communications to Kaplan Construction</li>
 
-			<div id="footer" class="mr-0"></div>
+
+					</ul>
+				</div>
+				
+				<div class="col-xl-12 mt-5"> 
+					<div class="col-12"><span class="h4"><b> Manager.</b></span> Minot, ND</div>
+					<h5 class="col-12">Geek Squad (09/2015 - 12/2017) </h5>
+					<ul class="mt-3 mr-xl-5 checkmark">
+						<li> Completed computer repairs on client computers</li>
+						<li> Managed sales team, computer repair team, and car installation team</li>
+						<li> Modified department behaviors to achieve previously impossible goals</li>
+						<li> Coded in VBA to streamline daily processes</li>
+					</ul>
+				</div>																		
+			</div>			
+			
+			
+		
+	<!--SKILLS-->		
+		<div class="col-xl-4">
+			<div class="col-12 py-5 bgComplementary text-lg-center"> 
+				<h1 class="white col-12"> Skills. </h1>
+				<div class="col-xl-8 offset-xl-2 col-5"> 
+					<hr class="shortWhiteHR">
+				</div>
+				<div class="col-xl-12 mt-5 white text-left"> 
+					<ul class="mt-3 mr-xl-5 checkmark">
+						<li class="mb-3">Professional experience with C#, HTML, CSS, JavaScript, JQuery, VBA, VB and SQL. </li>
+						<li class="mb-3">Proficient in rapid development, including use of CMS and Bootstrap 4. </li>
+						<li class="mb-3">Extensive experience with .Net framework development, including MVC and code on page.</li>
+						<li class="mb-3">Professional experience in creating SSIS projects in C#. </li>
+						<li class="mb-3">Experienced with mobile application design and development, with a background in Java and Swift. </li>
+						<li class="mb-3">Working knowledge of cybersecurity best practices and resources. </li>
+						<li class="mb-3">Extensive professional experience with MS Office Suite, including Excel, Word, PowerPoint, Outlook, Access, Publisher </li>
+						<li class="mb-3">Professional experience creating UIs and graphical elements for webpages.</li>					
+					</ul>
+				</div>											
+			</div>		
+		</div>
+		
+		<!--EDUCATION-->	
+			<div class="col-xl-12 col-12 bgcontrast extraPadding "> 
+				<h1 class="col-12 white"> Education. </h1>
+				<div class="col-5"> 
+					<hr class="shortWhiteHR">
+				</div>
+				
+				<div class="col-xl-12 mt-5 white"> 
+					<div class="col-12"><span class="h4"><b> B.S. Information Technology.</b></span> American Military University</div>
+					<ul class="mt-3 mr-xl-5 checkmark">
+						<li><b>Honors:</b> Summa Cum Laude </li>
+						<li><b>Concentration:</b> Mobile Application Design and Development</li>
+						<li><b>Minor:</b> Cybersecurity</li>
+						<li><b>Completion Status:</b> August 2018</li>
+					</ul>
+				</div>
+								
+				<div class="col-xl-12 mt-5 white"> 
+					<div class="col-12"><span class="h4"><b> M.S. Information Technology.</b></span> American Military University</div>
+					<ul class="mt-3 mr-xl-5 checkmark">
+						<li><b>Concentration:</b> IT Project Managment</li>
+						<li><b>Completion Status:</b> Expected 2021</li>
+					</ul>
+				</div>				
+			</div>
+		</div>
+		</div>
+		
+
+		
+      </div>
+	  
+	  <!--Modal footer -->
+      <div class="modal-footer bgcontrast">
+		<a href="items/RenMeredith_Resume.pdf" class="btn btn-white contrast">Download Resume (PDF)</a>
+        <button type="button" class="btn btn-white contrast" data-dismiss="modal">Close</button>		
+      </div>
+	  
+    </div>
+  </div>
+</div>
+
 
 
 </body>
 	<script type="text/javascript" src="jquery.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
 $("#chevrondown").hover(function() {
@@ -227,14 +597,17 @@ $("#chevrondown").hover(function() {
 	function(){
 	$(this).animate({fontSize: "1em"}, "fast");
 	});
+
 $("#chevrondown").click(function() {
     $('html,body').animate({
         scrollTop: $("#scrollTo").offset().top},
         'slow');
 });
 
-
-AOS.init();
+			AOS.init({
+				easing: 'ease-out-back',
+				duration: 1000
+			});
 
 </script>
 </html>
