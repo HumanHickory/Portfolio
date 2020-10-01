@@ -18,6 +18,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a496bc4f2c.js"></script>
 		<link rel="stylesheet" href="site.css" />
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 <style>
 
@@ -32,39 +37,150 @@
 			<div class="headerText col-12">Bills.</div>
 			
 			<div class="col-xl-6 col-12 bgMellow extraPadding"> 
-				<h1 class="col-12"> Beginning. </h1>
+				<h1 class="col-12"> Manual Pay. </h1>
 				<div class="col-5"> 
 					<hr class="shortBlackHR">
 				</div>				
 				<div class="col-xl-12 mt-5"> 
 					<ul>
-						<li class=" d-none d-xl-block"> <a href="https://account.progressive.com/access/login" target="_blank" class="primary"> <strong> Progressive </strong> </a> Due on the 1st </li>
+						<li class=" d-none d-xl-block"> <a href="https://account.progressive.com/access/login" target="_blank" class="primary"> <strong> Progressive </strong> </a> Due $164 on the 1st </li>
 						<li class="d-block d-xl-none"> <a href="https://play.google.com/store/apps/details?id=com.phonevalley.progressive" target="_blank" class="primary"> <strong> Progressive</strong> </a> Due on the 1st </li>
+						<li class="d-block"> <a href="tel:9199963245" class="primary"> <strong> Water </strong> </a> Due on the 15th. <b>Acct:</b> 1149379550 </li>
+						<li class="d-block"> <a href="tel:8004522777" class="primary"> <strong> Duke Energy </strong> </a> Due on the 15th. </li>
 
-						<li class="d-block"><a href="https://citiretailservices.citibankonline.com/RSnextgen/svc/launch/index.action?siteId=PLCN_BESTBUY#signon" target="_blank" class="primary"><strong> Best Buy </strong></a> Due by the 9th</li>
-
-						<li class="d-none d-xl-block"> <a href="https://www.verizon.com/support/residential/account/pay-bill/how-to" target="_blank" class="primary"> <strong> Verizon </strong> </a> Due by the 12th </li>
-						<li class="d-block d-xl-none"> <a href="https://play.google.com/store/apps/details?id=com.vzw.hss.myverizon" target="_blank" class="primary"> <strong> Verizon</strong> </a> Due by the 12th </li>
 					</ul>							
 				</div>			
 			</div>
 			
 			
 			<div class="col-xl-6 col-12 bgPrimary extraPadding "> 
-				<h1 class="col-12 white"> End. </h1>
+				<h1 class="col-12 white"> Auto Pay. </h1>
 				<div class="col-5"> 
 					<hr class="shortWhiteHR">
 				</div>
 				
 				<div class="white col-12 mt-5"> 
 					<ul>
-						<li class="d-block"> <a href="https://myfedloan.org/" target="_blank" class="contrast"> <strong> FedLoan </strong> </a> Due whenever </li>
-						<li class="d-block"> <a href="https://www.mysynchrony.com/mysyf/cmp-index.html?market=homefurnishings&store=lovesac" target="_blank" class="contrast"> <strong> LoveSac </strong> </a> Due the 24th  </li>
-						<li class="d-block"> <a href="https://www.fivecountyministorage.com/dashboard" target="_blank" class="contrast"> <strong> Five County </strong> </a> Due the 18th </li>
+						<li class="d-block"><a href="https://citiretailservices.citibankonline.com/RSnextgen/svc/launch/index.action?siteId=PLCN_BESTBUY#signon" target="_blank" class="contrast"><strong> Best Buy </strong></a> Autopay $200 on the 9th</li>
+						<li class="d-block"> <a href="https://www.mysynchrony.com/mysyf/cmp-index.html?market=homefurnishings&store=lovesac" target="_blank" class="contrast"> <strong> LoveSac </strong> </a> Autopay $100 on the 24th  </li>
+						<li class="d-block"> <a href="https://www.fivecountyministorage.com/dashboard" target="_blank" class="contrast"> <strong> Five County </strong> </a> Autopay $50 on the 18th </li>
+						<li class="d-block"> <span class="contrast"> <strong> MyChart </strong> </span> Autopay $181.28 on the 1st </li>
+					
+
+						<li class="d-block"> <a href="https://myfedloan.org/" target="_blank" class="contrast"> <strong> FedLoan </strong> </a> SUSPENDED TILL JAN </li>
+
 					</ul>
 				</div>
 			</div>
+			
+			<div class="col-12 bgComplementary pt-5">
+			<table cellspacing=0 class="table table-bordered table-hover table-inverse table-striped"id="BillPay" width=100%>
+				<thead>
+				<tr>
+					<th>Bill Name</th>
+					<th>Amount</th>
+					<th>Due Date</th>
+					<th>Payoff</th>
+				</tr>
+				</thead>
+				<tfoot>
+					<th>Bill Name</th>
+					<th id="sum"></th>
+					<th>Due Date</th>
+					<th>Payoff</th>
+				</tfoot>
+				<tbody>
+				<tr>	
+					<td>Water and Energy</td>
+					<td id="WaterAndEnergy"></td>
+					<td>1</td>
+					<td>NA</td>
+				</tr>
+				<tr>	
+					<td>LoveSac</td>
+					<td id="LoveSac"></td>
+					<td>24</td>
+					<td>2022 08</td>
+				</tr>
+				<tr>	
+					<td>BestBuy</td>
+					<td id="BestBuy"></td>
+					<td>9</td>
+					<td>2021 01</td>
+				</tr>
+				<tr>	
+					<td>MyChart 1</td>
+					<td id="MyChart1"></td>
+					<td>1</td>
+					<td>2021 06</td>
+				</tr>				
+				<tr>	
+					<td>MyChart 2</td>
+					<td id="MyChart2"></td>
+					<td>1</td>
+					<td>2021 10</td>
+				</tr>
+				<tr>	
+					<td>FiveCounty</td>
+					<td id="FiveCounty"></td>
+					<td>18</td>
+					<td>2021 07</td>
+				</tr>
+				<tr>	
+					<td>Progressive</td>
+					<td id="Progressive"></td>
+					<td>1</td>
+					<td>NA</td>
+				</tr>
+				<tr>	
+					<td>FedLoan</td>
+					<td id="FedLoan"></td>
+					<td>0</td>
+					<td>2022 08</td>
+				</tr>
+				<tr>	
+					<td>Spectrum</td>
+					<td id="Spectrum"></td>
+					<td>0</td>
+					<td>NA</td>
+				</tr>
+			</tbody>
+			</table>
+			</div>
 		</div>
+		
+	<script>
+		var WaterAndEnergy = 300;
+		var LoveSac = 100;
+		var BestBuy = 200
+		var MyChart1 = 83.60;
+		var MyChart2 = 97.68;
+		var FiveCounty = 50;
+		var Progressive = 164;
+		var Spectrum = 60;
+		var FedLoan = 200;
+		
+		var sum = WaterAndEnergy + LoveSac + BestBuy + MyChart1 + MyChart2 + FiveCounty + Progressive + Spectrum + FedLoan;
+		
+		
+		$(document).ready(function(){
+
+
+			$("#WaterAndEnergy").text("$" + WaterAndEnergy);
+			$("#LoveSac").text("$" + LoveSac);
+			$("#BestBuy").text("$" + BestBuy);
+			$("#MyChart1").text("$" + MyChart1);
+			$("#MyChart2").text("$" + MyChart2);
+			$("#FiveCounty").text("$" + FiveCounty);
+			$("#Progressive").text("$" + Progressive);
+			$("#Spectrum").text("$" + Spectrum);
+			$("#FedLoan").text("$" + FedLoan);
+			
+			$("#sum").text("$" + sum);
+			
+			$('#BillPay').DataTable();
+		});
+	</script>
 
 
 </body>
